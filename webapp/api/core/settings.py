@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 environ_origins = os.environ.get('CSRF_TRUSTED_ORIGINS', None)
 trusted_origins = [] if environ_origins is None else environ_origins.split(',')
-CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1:8001', 'http://localhost:8001'] + trusted_origins
+CSRF_TRUSTED_ORIGINS = ['https://127.0.0.1:8001', 'http://localhost:8001', 'http://35.95.243.198:8001'] + trusted_origins
 
 SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 

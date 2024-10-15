@@ -5,13 +5,15 @@ export default {
   methods: {
     fetchDetail (selectedEnt, cdbSearchIndex, callback) {
       if (selectedEnt && Object.keys(selectedEnt).length) {
-        const queryEntId = selectedEnt.id
-        this.$http.get(`/api/entities/${selectedEnt.entity}/`).then(resp => {
-          if (selectedEnt && queryEntId === selectedEnt.id) {
-            selectedEnt.cui = resp.data.label
-            this.fetchConcept(selectedEnt, cdbSearchIndex, callback)
-          }
-        })
+        // const queryEntId = selectedEnt.id
+        // this.$http.get(`/api/entities/${selectedEnt.entity}/`).then(resp => {
+        //   if (selectedEnt && queryEntId === selectedEnt.id) {
+        //     selectedEnt.cui = resp.data.label
+        //     this.fetchConcept(selectedEnt, cdbSearchIndex, callback)
+        //   }
+        // })
+        selectedEnt.cui = selectedEnt.entity
+        this.fetchConcept(selectedEnt, cdbSearchIndex, callback)
       } else {
         if (this.conceptSummary) {
           this.conceptSummary = {}

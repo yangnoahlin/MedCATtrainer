@@ -1,11 +1,11 @@
 <template>
   <div @login:success="loginSuccessful">
     <nav class="navbar">
-      <router-link class="app-name" to="/">Med<img class="icon" src="./assets/cat-logo.png" >AT</router-link>
-      <router-link class="navbar-brand" to="/">Projects</router-link>
-      <router-link class="navbar-brand" to="/metrics-reports">Metrics</router-link>
-      <router-link class="navbar-brand" to="/model-explore">Concepts</router-link>
-      <router-link class="navbar-brand" to="/demo">Try Model</router-link>
+      <router-link class="app-name" to="/"><img class="icon" src="./assets/itri-logo.svg" ></router-link>
+      <router-link class="navbar-brand" to="/">模型</router-link>
+      <!-- <router-link class="navbar-brand" to="/metrics-reports">Metrics</router-link>
+      <router-link class="navbar-brand" to="/model-explore">Concepts</router-link> -->
+      <router-link class="navbar-brand" to="/demo">即時測試</router-link>
       <span class="version-id">{{version}}</span>
       <a class="navbar-brand ml-auto small">
         <span @click="loginModal = true">
@@ -15,7 +15,7 @@
             <font-awesome-icon icon="user"></font-awesome-icon>
           </span>
         </span>
-        <span v-if="uname !== null" class="link logout" @click="logout">logout</span>
+        <span v-if="uname !== null" class="link logout" @click="logout">登出</span>
       </a>
     </nav>
     <router-view/>

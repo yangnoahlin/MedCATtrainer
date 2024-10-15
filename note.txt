@@ -1,0 +1,5 @@
+啟動
+docker compose -f docker-compose-dev.yml up
+
+重新編譯後啟動（使用最新的修改內容）
+docker compose -f docker-compose-dev.yml up --build

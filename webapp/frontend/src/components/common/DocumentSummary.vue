@@ -1,7 +1,7 @@
 <template>
   <div class="doc-summary">
     <div class="title">
-      Clinical Notes
+      病例摘要
       <font-awesome-icon icon="search" class="search-icon" @click="activateSearch"></font-awesome-icon>
     </div>
     <div v-if="searching" class="search-docs">

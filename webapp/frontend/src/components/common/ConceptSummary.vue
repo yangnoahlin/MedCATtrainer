@@ -1,10 +1,10 @@
 <template>
   <div class="sidebar">
-    <div class="title">Concept Summary</div>
+    <div class="title">Analysis Result</div>
     <div class="summary">
       <table class="concept-detail-table">
         <tbody>
-        <tr>
+        <!-- <tr>
           <td>Annotated Text</td>
           <td class="fit-content ent-name">{{selectedEnt !== null ? selectedEnt.value : 'n/a'}}</td>
         </tr>
@@ -53,6 +53,18 @@
         <tr @keyup.stop v-if="(project || {}).enable_entity_annotation_comments">
           <td>Comment</td>
           <td><textarea v-model="(selectedEnt || {}).comment" @keyup="updateComment" class="form-control"></textarea></td>
+        </tr> -->
+        <tr>
+          <td>Confirmed Status</td>
+        </tr>
+        <tr>
+          <td> {{ confirmedText }} </td>
+        </tr>
+        <tr>
+          <td>Result JSON</td>
+        </tr>
+        <tr>
+          <td><pre>{{ llmResult }}</pre></td>
         </tr>
         </tbody>
       </table>
@@ -100,7 +112,15 @@ export default {
       }
     },
     altSearch: Boolean,
-    searchFilterDBIndex: String
+    searchFilterDBIndex: String,
+    llmResult: {
+      type: String,
+      required: true
+    },
+    confirmedText: {
+      type: String,
+      required: true
+    }
   },
   mixins: [ConceptDetailService],
   data () {

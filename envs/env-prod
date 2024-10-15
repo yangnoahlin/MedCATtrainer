@@ -6,7 +6,7 @@ MEDCAT_CONFIG_FILE=/home/configs/base.txt
 ENV=prod
 
 # SECRET KEY - edit this for prod deployments,
-# SECRET_KEY=
+SECRET_KEY=m3$r=m09b2)r3qf6)0ck*9&@19$6c(o)=j=4$v@z9sgoeehh#4
 
 # Complete once this is deployed
 CSRF_TRUSTED_ORIGINS=

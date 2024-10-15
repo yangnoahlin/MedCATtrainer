@@ -16,6 +16,8 @@ import 'vue-simple-context-menu/dist/vue-simple-context-menu.css'
 
 import '@/plugins/fontawesome'
 import '@/assets/main.css'
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 
 Vue.use(VueSimpleContextMenu)
 Vue.use(BootstrapVue)
